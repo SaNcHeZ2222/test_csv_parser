@@ -2,7 +2,6 @@ import subprocess
 import sys
 import os
 import tempfile
-import pytest
 
 SCRIPT = os.path.abspath("main.py")
 

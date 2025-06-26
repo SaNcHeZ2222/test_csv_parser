@@ -17,4 +17,4 @@ def aggregate_column(rows: List[Dict[str, str]], instruction: str) -> Dict[str, 
     else:
         raise ValueError('Unsupported aggregation operation')
 
-    return {f'{op}({col})': round(result, 2)}
+    return {f'{op}({col})': str(round(result, 2))}

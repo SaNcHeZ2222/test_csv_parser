@@ -5,7 +5,7 @@ import pytest
 def test_filter_and_aggregate():
     file = 'example.csv'
     result = process_csv(file, where='brand==xiaomi', aggregate='price=max')
-    assert result == [{'max(price)': 299.0}]
+    assert result == [{'max(price)': '299.0'}]
 
 
 def test_combined_filter_aggregate(tmp_path):
@@ -14,7 +14,7 @@ def test_combined_filter_aggregate(tmp_path):
     file.write_text(content)
 
     result = process_csv(str(file), where="brand==xiaomi", aggregate="price=max")
-    assert result == [{'max(price)': 100.0}]
+    assert result == [{'max(price)': '100.0'}]
 
 
 def test_empty_result_after_filter(tmp_path):
